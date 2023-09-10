@@ -11,6 +11,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Spring-06-SpringBoot-Demo/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-06-SpringBoot-DemoProject/pom.xml" />
       </set>
     </option>
