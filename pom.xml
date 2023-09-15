@@ -15,7 +15,9 @@
         <module>Spring-03-Core-DI</module>
         <module>Spring-04-Abstraction</module>
         <module>Spring-05-Core-BeanScope</module>
-        <module>test</module>
+        <module>Spring-07-Spring-MVC-Controller</module>
+        <module>Spring-08-Spring-MVC-Model</module>
+
     </modules>
 
     <properties>
