@@ -28,7 +28,7 @@ public class CarController {
         return "car/car-info";
     }
 
-    @RequestMapping("/info/{make}/{year}") //localhost:8080/car/info/honda --> it coming dynamic way with PathVariable,
+    @RequestMapping("/info/{make}/{year}") //localhost:8080/car/info/honda/2018 --> it coming dynamic way with PathVariable,
     public String getCarInfo(@PathVariable String make,@PathVariable Integer year, Model model){
         model.addAttribute("make",make);
         model.addAttribute("year",year);
