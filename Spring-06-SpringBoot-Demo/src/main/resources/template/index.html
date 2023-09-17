@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>HTML Review</title>
@@ -21,5 +21,63 @@
 </ul>
 
 <a href="http://cydeo.com">Cydeo</a>
+<br>
+<br>
+
+<label>Username:</label>
+<input type="text" name="username" placeholder="username">
+<br>
+<br>
+<label>Password:</label>
+<input type="password">
+<br>
+
+<label>Enter your comments</label>
+<textarea name="comments"></textarea>
+
+<h1>Select your gender:</h1>
+<form>
+  <label>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other
+  </label>
+</form>
+
+<h1>Select your interests:</h1>
+<form>
+  <label>
+    <input type="checkbox" name="interest" value="reading"> Reading
+    <input type="checkbox" name="interest" value="swimming"> Swimming
+    <input type="checkbox" name="interest" value="hiking"> Hiking
+  </label>
+</form>
+
+<h1>Select your favorite fruit:</h1>
+<form>
+  <label>Fruit:</label>
+  <select>
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="cherry">Cherry</option>
+    <option value="orange">Orange</option>
+    <option value="strawberry">Strawberry</option>
+  </select>
+</form>
+<h1>Login</h1>
+<div style="background-color: aqua">
+<form>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <br>
+
+  <input type="submit" value="Login">
+</form>
+</div>
+
 </body>
 </html>
