@@ -18,6 +18,8 @@
         <module>Spring-06-SpringBoot-Demo</module>
         <module>Spring-07-Spring-MVC-Controller</module>
         <module>Spring-08-Spring-MVC-Model</module>
+        <module>Spring-9-Spring-Thymeleaf</module>
+
 
     </modules>
 
