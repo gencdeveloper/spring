@@ -12,5 +12,21 @@
 <h2 th:text="${students.get(0).firstName}"></h2>
 <h2 th:text="${students.get(0).lastName}"></h2>
 <h2 th:text="${students.get(0).age}"></h2>
+
+<!--Concetenation-->
+<h2 th:text="${ 'Welcome ' + students.get(0).firstName}"></h2>
+
+<!--Link-->
+<br>
+<a th:href="@{https://cydeo.com/}">Cydeo Page</a><br>
+<a th:href="@{/student/welcome}">Link 1</a>
+
+<!--Adding parameters to link-->
+<a th:href="@{/student/welcome(id=${students.get(0).firstName})}">Link2</a>
+
+<ul>
+    <li th:each="student: ${students}" th:text="${student.firstName}">SDLC</li>
+</ul>
+
 </body>
 </html>
