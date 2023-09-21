@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student</title>
+    <title th:text="#{index.page.title}">Title</title>
 </head>
 <body>
 
@@ -23,10 +23,20 @@
 
 <!--Adding parameters to link-->
 <a th:href="@{/student/welcome(id=${students.get(0).firstName})}">Link2</a>
-
+<!--Iteration-->
 <ul>
     <li th:each="student: ${students}" th:text="${student.firstName}">SDLC</li>
 </ul>
+
+<!--Conditional Logic with ternary operator-->
+<div th:text="${students.get(0).age > 25 ? 'ELIGIBLE' :'NOT ELIGIBLE'}"></div>
+
+
+<!--Conditional Logic another way-->
+<div>
+    <span th:if="${students.get(0).getState() == 'Arizona'}">Arizona</span>
+    <span th:unless="${students.get(0).getState() == 'Arizona'}">Not Arizona</span>
+</div>
 
 </body>
 </html>
