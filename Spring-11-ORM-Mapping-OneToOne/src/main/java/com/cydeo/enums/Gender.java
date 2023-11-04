@@ -1,5 +1,5 @@
 package com.cydeo.enums;
 
 public enum Gender {
-    MA,F
+    M,F
 }

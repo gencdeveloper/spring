@@ -25,7 +25,16 @@ public class Employee extends BaseEntity { //table name
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    public Employee(int regionId, int salary, String firstName, String lastName, String email, LocalDate hireDate,Gender gender) {
+    @OneToOne(cascade = CascadeType.ALL)
+    //@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @JoinColumn(name="department_id") //change name of foreign column
+    private Department department; //has a relationsShip
+
+    @OneToOne(cascade = CascadeType.ALL)
+    //@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @JoinColumn(name="region_id") //change name of foreign column
+    private Region region; //has a relationsShip
+    public Employee(int salary, String firstName, String lastName, String email, LocalDate hireDate,Gender gender) {
 
         this.salary = salary;
         this.firstName = firstName;
