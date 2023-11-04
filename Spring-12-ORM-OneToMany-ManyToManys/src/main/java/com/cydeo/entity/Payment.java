@@ -26,6 +26,11 @@ public class Payment extends BaseEntity{
     @JoinColumn(name="payment_details")
     private PaymentDetail paymentDetails;
 
+    @ManyToOne
+    private Merchant merchant;
+
+    @ManyToOne
+    private Customer customer;
     public Payment(BigDecimal amount, LocalDate createdDate, Status status) {
         this.amount = amount;
         this.createdDate = createdDate;
