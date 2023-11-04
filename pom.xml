@@ -20,6 +20,7 @@
         <module>Spring-08-Spring-MVC-Model</module>
         <module>Spring-9-Spring-Thymeleaf</module>
         <module>Spring-10-ORM-TableCreation</module>
+        <module>Spring-11-ORM-Mapping-OneToOne</module>
 
 
     </modules>
