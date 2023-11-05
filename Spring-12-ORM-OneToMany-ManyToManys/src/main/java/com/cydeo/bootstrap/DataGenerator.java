@@ -1,14 +1,8 @@
 package com.cydeo.bootstrap;
 
-import com.cydeo.entity.Customer;
-import com.cydeo.entity.Merchant;
-import com.cydeo.entity.Payment;
-import com.cydeo.entity.PaymentDetail;
+import com.cydeo.entity.*;
 import com.cydeo.enums.Status;
-import com.cydeo.repository.CustomerRepository;
-import com.cydeo.repository.MerchantRepository;
-import com.cydeo.repository.PaymentDetailRepository;
-import com.cydeo.repository.PaymentRepository;
+import com.cydeo.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -23,16 +17,22 @@ import java.util.List;
 public class DataGenerator implements CommandLineRunner {
 
 
-    PaymentRepository paymentRepository;
-    MerchantRepository merchantRepository;
-    CustomerRepository customerRepository;
-
-
-    public DataGenerator(PaymentRepository paymentRepository, MerchantRepository merchantRepository, CustomerRepository customerRepository) {
+    public DataGenerator(PaymentRepository paymentRepository, MerchantRepository merchantRepository, CustomerRepository customerRepository, ItemRepository itemRepository, CartRepository cartRepository) {
         this.paymentRepository = paymentRepository;
         this.merchantRepository = merchantRepository;
         this.customerRepository = customerRepository;
+        this.itemRepository = itemRepository;
+        this.cartRepository = cartRepository;
     }
+
+    PaymentRepository paymentRepository;
+    MerchantRepository merchantRepository;
+    CustomerRepository customerRepository;
+    ItemRepository itemRepository;
+    CartRepository cartRepository;
+
+
+
 
     @Override
     public void run(String... args)throws Exception{
@@ -61,6 +61,27 @@ public class DataGenerator implements CommandLineRunner {
 
         payment1.setMerchant(m1);
         payment2.setMerchant(m1);
+
+        Item item1 = new Item("Milk","M01");
+        Item item2 = new Item("Sugar","M02");
+        Item item3 = new Item("Bread","M03");
+
+        Cart cart1 = new Cart();
+        Cart cart2 = new Cart();
+
+        //Assigned
+        cart1.setItemList(Arrays.asList(item1,item2,item3));
+        cart2.setItemList(Arrays.asList(item1,item2,item3));
+
+        itemRepository.save(item1);
+        itemRepository.save(item2);
+        itemRepository.save(item3);
+
+        cartRepository.save(cart1);
+        cartRepository.save(cart2);
+
+
+
         merchantRepository.save(m1);
         paymentRepository.saveAll(paymentList);
     }
