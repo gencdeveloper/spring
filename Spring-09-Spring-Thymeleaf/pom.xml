@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>Spring-9-Spring-Thymeleaf</artifactId>
+    <artifactId>Spring-09-Spring-Thymeleaf</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Spring-9-Spring-Thymeleaf</name>
     <description>Spring-9-Spring-Thymeleaf</description>
