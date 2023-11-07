@@ -2,8 +2,11 @@ package com.cydeo.repository;
 
 import com.cydeo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
+import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -83,4 +86,12 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
 
     @Query(value = "Select * From employees where salary ?1",nativeQuery = true) //native query with pure sql
     List<Employee> readEmployeeDetailBySalary(int salary);
+
+    @Query("select e from Employee e where e.salary = :salary")
+    List<Employee> getEmployeeSalary(@Param("salary")int salary);
+
+    @Modifying
+    @Transactional
+    @Query("UPDATE Employee e SET e.email = 'admin@email.com' where e.id=:id")
+    void updateEmployeeJPQL(@Param("id") int id);
 }
