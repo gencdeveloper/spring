@@ -94,4 +94,6 @@ public interface EmployeeRepository extends JpaRepository<Employee,Long> {
     @Transactional
     @Query("UPDATE Employee e SET e.email = 'admin@email.com' where e.id=:id")
     void updateEmployeeJPQL(@Param("id") int id);
+
+
 }
