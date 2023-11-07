@@ -60,6 +60,19 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("Detils" + employeeRepository.getEmployeeDetail());
 
         System.out.println("---------------EMPLOYEE END---------------");
+
+        System.out.println("---------------COURSE START for drive query---------------");
+
+        courseRepository.findByCategory("Spring").forEach(System.out::println);
+        courseRepository.findByCategoryOrderByName("Spring").forEach(System.out::println);
+        System.out.println(courseRepository.existsByName("Sts"));
+        System.out.println(courseRepository.countByCategory("Spring"));
+        System.out.println(courseRepository.findByNameStartsWith("Sp"));
+        courseRepository.streamByCategory("Spring").forEach(System.out::println);
+
+
+        System.out.println("---------------COURSE END---------------");
+
     }
 }
 
