@@ -23,6 +23,8 @@
         <module>Spring-11-ORM-Mapping-OneToOne</module>
         <module>Spring-12-ORM-OneToMany-ManyToManys</module>
         <module>Spring-14-ORM-Queries</module>
+        <module>Spring-15-REST</module>
+        <module>Spring-16-REST-Jackson</module>
 
     </modules>
 
