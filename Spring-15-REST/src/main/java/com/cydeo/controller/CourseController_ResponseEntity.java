@@ -18,14 +18,15 @@ public class CourseController_ResponseEntity {
         this.courseService = courseService;
     }
 
-    @GetMapping
+    @GetMapping //API Design for response entities.
     public ResponseEntity<List<CourseDTO>> getAllCourses(){
-        return ResponseEntity
-                .status(HttpStatus.ACCEPTED)
-                .header("Version","Cydeo.V2")
-                .header("Operation","Get List")
-                .body(courseService.getCourses());
+      return ResponseEntity
+              .status(HttpStatus.ACCEPTED)
+              .header("Version","Cydeo.V2")
+              .header("Operation","Get List")
+              .body(courseService.getCourses());
     }
+
 
 
     @GetMapping("{id}")
@@ -34,7 +35,7 @@ public class CourseController_ResponseEntity {
     }
 
     @PostMapping
-    public ResponseEntity<CourseDTO> createCourse(@RequestBody CourseDTO course){   //break till 8:30 pm
+    public ResponseEntity<CourseDTO> createCourse(@RequestBody CourseDTO course){
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .header("Operation","Create")
