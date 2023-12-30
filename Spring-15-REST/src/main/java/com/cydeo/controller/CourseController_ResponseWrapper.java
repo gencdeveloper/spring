@@ -19,9 +19,9 @@ public class CourseController_ResponseWrapper {
         this.courseService = courseService;
     }
 
+
     @GetMapping
     public ResponseEntity<ResponseWrapper> getAllCourses(){
-
         return ResponseEntity
                 .status(HttpStatus.ACCEPTED)
                 .header("Version","Cydeo.V3")
@@ -30,6 +30,6 @@ public class CourseController_ResponseWrapper {
 
     @GetMapping("{id}")
     public ResponseEntity<ResponseWrapper> getCourseById(@PathVariable("id") Long courseId){
-        return ResponseEntity.ok(new ResponseWrapper("course:" + courseId + "retrieved",courseService.getCourseById(courseId)));
+        return ResponseEntity.ok(new ResponseWrapper("course: " + courseId + " retrieved",courseService.getCourseById(courseId)));
     }
 }
