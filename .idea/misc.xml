@@ -16,12 +16,15 @@
         <option value="$PROJECT_DIR$/Spring-12-ORM-OneToMany-ManyToMany/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-12-ORM-OneToMany-ManyToManys/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-14-ORM-Queries/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-17-REST-ConsumingApis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Spring-06-SpringBoot-DemoProject/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-12-ORM-OneToMany-ManyToMany/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-17-Rest-ConsumingApis/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/test/pom.xml" />
       </set>
     </option>
