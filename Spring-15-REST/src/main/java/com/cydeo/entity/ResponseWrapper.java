@@ -6,17 +6,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
-@Getter
-@Setter
+@Getter //this getter and setter is important because
+@Setter//when json is converting to java object through jackson, then jackson is using to getter and setter in the mapping
 @NoArgsConstructor
-public class ResponseWrapper {
+public class ResponseWrapper{
 
     private boolean success;
     private String message;
     private Integer code;
     private Object data;
 
-    public ResponseWrapper(String message, Object data) {
+    public ResponseWrapper(String message,Object data) {
         this.success = true;
         this.message = message;
         this.code = HttpStatus.OK.value();
