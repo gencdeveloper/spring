@@ -26,7 +26,7 @@
         <module>Spring-15-REST</module>
         <module>Spring-16-REST-Jackson</module>
         <module>Spring-17-REST-ConsumingApis</module>
-
+        <module>Spring-21-UnitTesting-JUnit5</module>
 
 
     </modules>
