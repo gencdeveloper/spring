@@ -78,7 +78,7 @@ class CalculatorTest {
     @Test
     void add2() {
         System.out.println("add2");
-//        assertThrows(IllegalArgumentException.class, () -> Calculator.add2(1, 2));
+//       assertThrows(IllegalArgumentException.class, () -> Calculator.add2(1, 2));
     }
 
 
