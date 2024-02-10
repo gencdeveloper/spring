@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/Spring-12-ORM-OneToMany-ManyToManys/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-14-ORM-Queries/pom.xml" />
         <option value="$PROJECT_DIR$/Spring-17-REST-ConsumingApis/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-22-UnitTesting-Mockito/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
