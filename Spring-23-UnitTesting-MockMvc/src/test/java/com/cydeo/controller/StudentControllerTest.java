@@ -24,7 +24,7 @@ class StudentControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @MockBean
+    @MockBean // I am using mock bean, so will not affect to my real studentService fields
     StudentService studentService;
 
     @Test
@@ -39,7 +39,7 @@ class StudentControllerTest {
 
     }
 
-    @Test
+    @Test //this strategy is not preferable
     void jsonAssert() throws JSONException {
 
         String expected = "{\"id\": 0, \"firstName\": \"Mike\", \"lastName\": \"Smith\"}";
@@ -49,7 +49,7 @@ class StudentControllerTest {
 
     }
 
-    @Test
+    @Test //this strategy is preferable.
     void getStudent_service() throws Exception {
 
         when(studentService.getStudent()).thenReturn(Arrays.asList(
