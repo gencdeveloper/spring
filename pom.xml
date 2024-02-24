@@ -27,6 +27,8 @@
         <module>Spring-16-REST-Jackson</module>
         <module>Spring-17-REST-ConsumingApis</module>
         <module>Spring-21-UnitTesting-JUnit5</module>
+        <module>Spring-23-UnitTesting-MockMvc</module>
+        <module>Spring-24-Docker</module>
 
 
     </modules>
